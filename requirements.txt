@@ -6,6 +6,7 @@ pymongo==4.6.1
 certifi
 #dill
 pyaml
+mlflow
 # pymongo[srv]==3.6
 
 

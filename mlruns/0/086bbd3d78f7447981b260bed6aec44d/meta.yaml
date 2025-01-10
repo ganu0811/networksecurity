@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/MLFlow/NetworkSecurity/mlruns/0/086bbd3d78f7447981b260bed6aec44d/artifacts
+end_time: 1736524120153
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 086bbd3d78f7447981b260bed6aec44d
+run_name: thoughtful-rat-234
+run_uuid: 086bbd3d78f7447981b260bed6aec44d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736524120055
+status: 4
+tags: []
+user_id: Rajaas
