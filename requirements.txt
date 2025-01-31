@@ -7,6 +7,10 @@ certifi
 #dill
 pyaml
 mlflow
+dagshub
+fastapi
+uvicorn
+
 # pymongo[srv]==3.6
 
 

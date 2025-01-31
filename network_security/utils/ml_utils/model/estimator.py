@@ -4,7 +4,7 @@ from network_security.exception.exception import NetworkSecurityException
 from network_security.logging.logger import logging
 
 
-class NetworkModel:
+class uvicorn:
     def __init__(self, preprocessor, model):
         try:
             self.preprocessor = preprocessor

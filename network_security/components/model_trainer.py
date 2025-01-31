@@ -9,7 +9,7 @@ from network_security.entity.config_entity import ModelTrainerConfig
 
 from network_security.utils.main_utils.utils import save_object, save_numpy_array_data, load_object, load_numpy_array_data
 from network_security.utils.ml_utils.metric.classification_metric import   get_classification_score
-from network_security.utils.ml_utils.model.estimator import NetworkModel 
+from network_security.utils.ml_utils.model.estimator import uvicorn 
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import r2_score
@@ -24,6 +24,12 @@ from sklearn.ensemble import(
 import mlflow
 
 from network_security.utils.main_utils.utils import evaluate_models
+
+# MLFLOW Experiment Tracking in a remote repository using DAGSHUB
+import dagshub
+dagshub.init(repo_owner='ganu0811', repo_name='networksecurity', mlflow=True)
+
+
 class ModelTrainer:
     
     def __init__(self, model_trainer_config: ModelTrainerConfig, 
@@ -122,11 +128,13 @@ class ModelTrainer:
         model_dir_path = os.path.dirname(self.model_trainer_config.trained_model_file_path)
         os.makedirs(model_dir_path, exist_ok=True)
         
-        Network_Model = NetworkModel(
+        Network_Model = uvicorn(
             preprocessor = preprocessor,
             model = best_model)
         save_object(file_path = self.model_trainer_config.trained_model_file_path,
                     obj = Network_Model)
+        
+        save_object("final_model/model.pkl", best_model)
         
         ## Model Trainer Artifact
         

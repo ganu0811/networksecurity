@@ -1,0 +1,34 @@
+[2025-01-10 16:33:02,822] 1025 httpx - INFO - HTTP Request: POST https://dagshub.com/login/oauth/middleman "HTTP/1.1 200 OK"
+[2025-01-10 16:33:03,067] 1025 httpx - INFO - HTTP Request: POST https://dagshub.com/login/oauth/access_token "HTTP/1.1 200 OK"
+[2025-01-10 16:33:03,384] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-01-10 16:33:03,393] 107 dagshub - INFO - Accessing as ganu0811
+[2025-01-10 16:33:03,634] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/ganu0811/networksecurity "HTTP/1.1 200 OK"
+[2025-01-10 16:33:03,846] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-01-10 16:33:03,852] 107 dagshub - INFO - Initialized MLflow to track repo "ganu0811/networksecurity"
+[2025-01-10 16:33:03,855] 107 dagshub - INFO - Repository ganu0811/networksecurity initialized!
+[2025-01-10 16:33:03,856] 18 root - INFO - Initiate the Data ingestion
+[2025-01-10 16:33:08,266] 64 root - INFO - Performed train test split on the DataFrame
+[2025-01-10 16:33:08,266] 66 root - INFO - Exited the split_data_as_train_test method of Data_Ingestion class
+[2025-01-10 16:33:08,266] 72 root - INFO - Exporting the train and test file path
+[2025-01-10 16:33:08,365] 78 root - INFO - Exported the train and test file path
+[2025-01-10 16:33:08,368] 21 root - INFO - Data Ingestion is completed
+[2025-01-10 16:33:08,381] 27 root - INFO - Initaite the data validation
+[2025-01-10 16:33:08,468] 36 root - INFO - Required number of columns:2
+[2025-01-10 16:33:08,468] 37 root - INFO - Data frame has columns:32
+[2025-01-10 16:33:08,468] 36 root - INFO - Required number of columns:2
+[2025-01-10 16:33:08,469] 37 root - INFO - Data frame has columns:32
+[2025-01-10 16:33:08,731] 29 root - INFO - Data Validation Completed
+[2025-01-10 16:33:08,732] 36 root - INFO - Initiate the data transformation
+[2025-01-10 16:33:08,732] 63 root - INFO - Data Tranformation initiated
+[2025-01-10 16:33:08,732] 66 root - INFO - Starting the data transformation process
+[2025-01-10 16:33:08,779] 51 root - INFO - Entered the get_data_transformer_object method of DataTransformation class
+[2025-01-10 16:33:08,780] 54 root - INFO - Initialized the KNN Imputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[2025-01-10 16:33:08,799] 50 root - INFO - Entered the save_object method of main utils class
+[2025-01-10 16:33:08,804] 55 root - INFO - Exited the save_object method of Main utils class
+[2025-01-10 16:33:08,805] 38 root - INFO - Data Transformation Completed
+[2025-01-10 16:33:08,805] 41 root - INFO - Model training started
+[2025-01-10 16:33:08,805] 150 root - INFO - Entered the model trainer initiation
+[2025-01-10 16:38:45,918] 50 root - INFO - Entered the save_object method of main utils class
+[2025-01-10 16:38:45,953] 55 root - INFO - Exited the save_object method of Main utils class
+[2025-01-10 16:38:45,953] 143 root - INFO - Model Trainer Artifact: ModelTrainerArtifact(trained_model_file_path='Artifacts\\01_10_2025_16_32_45\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(precision_score=0.9904315960912052, recall_score=0.9926545602938176, f1_score=0.9915418322633242), test_metric_artifact=ClassificationMetricArtifact(precision_score=0.960691823899371, recall_score=0.9729299363057324, f1_score=0.9667721518987342))
+[2025-01-10 16:38:45,956] 46 root - INFO - Model Trainer artifact created
